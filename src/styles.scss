@@ -1,0 +1,99 @@
+$mat-blueking: (
+    50 : #e1e3e6,
+    100 : #b4b9c1,
+    200 : #828a97,
+    300 : #4f5b6d,
+    400 : #2a374e,
+    500 : #04142f,
+    600 : #03122a,
+    700 : #030e23,
+    800 : #020b1d,
+    900 : #010612,
+    A100 : #536dff,
+    A200 : #2041ff,
+    A400 : #0023ec,
+    A700 : #001fd3,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-gold: (
+    50 : #fdf6e2,
+    100 : #faeab7,
+    200 : #f7dc88,
+    300 : #f4cd58,
+    400 : #f1c334,
+    500 : #efb810,
+    600 : #edb10e,
+    700 : #eba80c,
+    800 : #e8a009,
+    900 : #e49105,
+    A100 : #ffffff,
+    A200 : #ffefd9,
+    A400 : #ffdaa6,
+    A700 : #ffd08c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$BaaxalWeb-primary: mat-palette($mat-blueking);
+$BaaxalWeb-accent: mat-palette($mat-gold, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$BaaxalWeb-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$BaaxalWeb-theme: mat-light-theme($BaaxalWeb-primary, $BaaxalWeb-accent, $BaaxalWeb-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($BaaxalWeb-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
