@@ -1,0 +1,48 @@
+
+
+input {
+  color: white;
+  margin-top: 1.5% !important;
+  width: 80% !important;
+  border-bottom: 1px solid white !important;
+}
+
+i {
+  // color: white;
+  // font-size: 2rem;
+  
+  margin-top: 25px !important;
+
+}
+
+
+
+
+a {
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  &:hover {
+    color: #09d994;
+  }
+  &:last-child {
+    margin-right: 15%;
+  }
+  &:not(:last-child) {
+    margin-right: 10%;
+  }
+}
+
+
+.img {
+  width: 15%;
+  margin-left: 15%;
+  margin-top: 1%;
+  // background: red;
+
+  img {
+
+    height: 80%;
+    width: 80%;
+  }
+}

@@ -6,22 +6,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BaaxalRoutingModule } from './baaxal-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BaaxalComponent } from './baaxal.component';
-import { LoginComponent } from './components/login/login.component';
-import { UserService } from './services/user.service';
 import * as AOS from "aos"
+import { SharedModule } from './shared/shared.module';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
-  declarations: [BaaxalComponent, LoginComponent,],
+  declarations: [
+    BaaxalComponent, 
+    AuthComponent
+  ],
   imports: [
     FormsModule,
-    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     BaaxalRoutingModule,
+    SharedModule
   ],
   providers: [
-    UserService
   ],
   bootstrap: [BaaxalComponent]
 })
