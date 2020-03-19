@@ -10,15 +10,19 @@ import * as AOS from "aos"
 import { SharedModule } from './shared/shared.module';
 import { AuthComponent } from './auth/auth.component';
 
+import { HttpClient, HttpHeaders, HttpClientModule  } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     BaaxalComponent, 
     AuthComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     CommonModule,
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     BaaxalRoutingModule,
     SharedModule
